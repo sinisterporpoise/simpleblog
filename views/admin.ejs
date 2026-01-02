@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<HTML Lang = "en-us">
+<HEAD>
+	<META CHARSET = "utf-8">
+	<Title>Portable Globe Theater Company Admiistrator page</Title>
+	<link rel = "stylesheet" href = "globe.css">
+</HEAD>
+<BODY>
+		<div id = "container" class="container">
+		<div id = "header" class = "header">
+				<p>The Portable Globe Theater Company</p>
+				
+		</div><!-- headder -->
+		<br>
+		<div id = "navbar" class = "navbar">
+			<p>Home&nbsp&nbsp<a href =  "/about">About</a>&nbsp&nbsp<a href = "/login">Login</a>&nbsp&nbsp<a href= "/contact">Contact Us</a>&nbsp&nbsp
+			<a href = "serena.ejs">Serena's Blog</a></p>
+			<p><p><strong>"The administrator forms"</strong></p>
+		</div><!-- End navbar -->
+				<% if ( role == "admin") { %>
+				<div class = main>
+				<div id = "stories" class = "stories">
+					<form id = "storyForm" enctype ="multipart/form-data">
+						<label for "posts">Choose a post type</label>
+						<select name = "posts" id = "posts">
+							<option value = "blog">Blog</option>
+							<option value = "news">News</option>
+						</select>
+						<div id = "formarea">
+
+						</div>
+						<input type = "submit" id="addStory" name="addStory" value = "Add Story">
+					</form>
+				<% } else { %>
+					<h1>You are not auhtorized to view this page.</h1>
+					<h2>Are you logged in as an admin?</h2>
+					<% } %>
+				</div><!-- End Stories -->
+				</div><!-- End main --> 
+			
+
+
+				<div id = "archives" class = "archives">
+				</div><!-- Archives -->
+		</div><!-- end body -->
+		<div id = "footer" class = "footer">
+			<p>This is a page for a fictional traveling theter company in a Mind's Eye Theater Vampire the Masquerade Game. The game is held one a month at the Allen Hope Memorial Center outside of Terre Haute, Indiana. For more information <a href="terrehautechronicles.com">click here.</a></p>
+		</div><!-- footer -->
+	</div><!-- End container -->
+	<script src = "admin.js"></script>
+</BODY>
+</HTML>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<HTML Lang = "en-us">
+<HEAD>
+	<META CHARSET = "utf-8">
+	<Title>Serena Fitzgerald's Personal Diary</Title>
+	<link rel = "stylesheet" href = "globe.css">
+</HEAD>
+<BODY>
+		<div id = "container" class="container">
+		<div id = "header" class = "header">
+				<p>Serena Fitzgerald's Personal Diary</p>
+				
+		</div><!-- headder -->
+		<br>
+		<div id = "navbar" class = "navbar">
+			<p>Home&nbsp&nbsp<a href =  "/about">About</a>&nbsp&nbsp<a href = "/login">Login</a>&nbsp&nbsp<a href= "/contact">Contact Us</a>&nbsp&nbsp
+			Serena's Blog</p>
+			<p><strong>"This is my personal diary, and I know no one would ever read it without my permission. "</strong></p>
+		</div><!-- End navbar -->
+				<div id = "stories" class = "stories">
+					<h5>Login</h5>
+						<form id="loginForm">
+						    <h4>Password</h4>
+						    <p>There might be 123 princesses nearby....</p>
+						    <input type="password" id="password" name="password">
+						    <input type="submit" value="Login">
+						</form>
+
+						<p id="errorMsg" style="color:red; display:none;">Username or password incorrect</p>
+
+						<div id="blogPosts" style="display:none;">
+						    <% if (titles) { %>
+						        <% for (let j = titles.length - 1; j >= 0; j--) { %>
+						            <h3><%= titles[j].title %></h3>
+						            <br>
+						            <%- titles[j].blog_post %>
+						        <% } %>
+						    <% } %>
+						</div>
+							
+				</div><!-- End Stories -->
+				<div id = "archives" class = "archives">
+				<h5>Previous Stories</h5>
+					<% if (titles) { %>
+						<ul>
+						<% for (let i = titles.length-1; i >=0; i--) { %>
+							<a href "junk.html"><li><%= titles[i].title %></li></a>
+						<% } %><!-- End for -->
+					</ul>
+						<%	} %><!--End If -->
+					</div>
+				</div><!-- Archives -->
+		</div><!-- end body -->
+		<div id = "footer" class = "footer">
+			<p>This is a page for a fictional traveling theter company in a Mind's Eye Theater Vampire the Masquerade Game. The game is held one a month at the Allen Hope Memorial Center outside of Terre Haute, Indiana. For more information <a href="terrehautechronicles.com">click here.</a></p>
+		</div><!-- footer -->
+	</div><!-- End container -->
+	<script src = "fakelogin.js"></script>
+</BODY>
+</HTML>

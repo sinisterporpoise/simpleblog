@@ -1,0 +1,81 @@
+.container {
+  background: linear-gradient(black, gold);
+  display: grid;
+  /* Defines 3 columns for the main body area */
+  grid-template-columns:  1fr 1fr 1fr; 
+  /* Defines 3 rows: Header/Nav, Main Content sections, Footer */
+  grid-template-rows: auto auto auto auto; 
+  gap: 10px;
+  min-height: 100vh;
+  border: 2px solid gray;
+}
+
+/* 🎯 Header: Row 1, Column 1 */
+.header {
+  color: darkgoldenrod;
+  background-image: url("images.jpeg");
+  grid-column: 1 / 4; /* Takes up only the first column */
+  grid-row: 1;
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.picture {
+  float: left;
+  padding: 10px;
+  border: solid 1px;
+  margin-right: 1em;
+
+}
+/* 🎯 Navbar: Row 1, Columns 2 and 3 */
+.navbar {
+  background-color: black;
+  color: ghostwhite;
+  grid-column: 1 / 4; /* Sits next to header and spans the remaining space */
+  grid-row: 2;
+  text-align: right; 
+  height: 100px;
+}
+
+
+/* 🎯 Stories: Row 2, Column 2 (Side-by-side with Main) */
+.stories {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+/* 🎯 Archives: Row 2, Column 3 (Side-by-side with Stories) */
+.archives {
+  grid-column: 3 / 4; 
+  grid-row: 3;
+  padding: 10px;
+}
+
+/* 🎯 Footer: Row 3, Column 1-4 */
+.footer {
+  background: linear-gradient(gold, black);
+  text-align: left;
+  grid-column: 1 / 4; /* Spans all three columns */
+  grid-row: 4;
+  
+  color: white;
+  font-family: Arial, sans-serif; 
+  font-size: 12pt;
+  padding: 10px;
+}
+p {
+	
+}
+
+img {
+	margin-left: 2em;
+	margin-right: 2em;
+	width: 120px;
+	height: 80px;
+}

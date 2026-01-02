@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<HTML Lang = "en-us">
+<HEAD>
+	<META CHARSET = "utf-8">
+	<Title>Portable Globe Theater Company</Title>
+	<link rel = "stylesheet" href = "globe.css">
+</HEAD>
+<BODY>
+		<div id = "container" class="container">
+		<div id = "header" class = "header">
+				<p>The Portable Globe Theater Company</p>
+				
+		</div><!-- headder -->
+		<br>
+		<div id = "navbar" class = "navbar">
+			<p><a href = "Home">Home</a>&nbsp&nbsp<a href =  "/about">About</a>&nbsp&nbspLogin</a>&nbsp&nbsp<a href= "/contact">Contact Us</a>&nbsp&nbsp
+			<a href = "/serena">Serena's Blog</a></p>
+			<p><p><strong>"Life's but a poor player that struts and frets his hour upon the stagee and then is heard no more."</strong></p>
+		</div><!-- End navbar -->
+				<div id = "stories" class = "stories">
+					<h5>Login</h5>
+					<form method = "POST">
+						<h4>Username</h4>
+						<input type="text" width="20" id =  "username" name="username">
+						<h4>Password</h4>
+						<input type = "password" width="20" id="password" name="password">
+						<h4>Retype Password</h4>
+						<input type = "password" width = "20" id = "verify" name="verify"><br>
+						<a href="/login">Login</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type = "submit" value="Create" id = "submit">
+						<% if (success == false) { %>
+							<p color = "red">Something went wrong with the account creation, either the name is already in use or the passwords do not match."</p>
+						<% } %>
+					</form>
+					</div><!-- End Stories -->
+				<div id = "archives" class = "archives">
+				</div><!-- Archives -->
+		</div><!-- end body -->
+		<div id = "footer" class = "footer">
+			<p>This is a page for a fictional traveling theter company in a Mind's Eye Theater Vampire the Masquerade Game. The game is held one a month at the Allen Hope Memorial Center outside of Terre Haute, Indiana. For more information <a href="terrehautechronicles.com">click here.</a></p>
+		</div><!-- footer -->
+	</div><!-- End container -->
+
+</BODY>
+</HTML>
