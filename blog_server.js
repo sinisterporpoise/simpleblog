@@ -34,7 +34,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
-
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 
 //---------------------------------------------------
@@ -75,14 +75,11 @@ app.use(express.json());
  app.get('/', async (req, res) => {
  	// Get the news stories from the database
  	values = ["news"];
- 	sql = "SELECT news_id, newsitem FROM news";
+ 	sql = "SELECT news_id, newsitem, photo FROM news";
 
  	titles = await dbQuery(sql, values);
- 	console.log(titles); 
- 	res.render('index', { username: "Guest", titles: 'Add some!'});
-
-
-
+ 	console.log(titles[titles.length-1].photo) ;
+ 	res.render('index', { username: "Guest", titles })
  });
 
 
@@ -229,7 +226,7 @@ app.get('/serena', async (req, res) => {
 	values = ["posts"];
 	sql = "SELECT title, blog_post FROM posts";
 	let titles = await dbQuery(sql, values);
-	console.log(titles)
+	console.log(titles[titles.length-1].photo)
 	res.render('serena', { titles});
 });
  //--------------------------------------------------

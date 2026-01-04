@@ -20,15 +20,18 @@
 				<div class = main>
 				<div id = "stories" class = "stories">
 					<h5>News and Events</h5>
-						Welcome, <%= username  %>
-					<h6>Dr. Faustus</h6>
-					<p>Coming: January 10, 2026</p>
 
+						<% if (titles  && titles.length > 0 )  { %>
+						<% if (titles[titles.length-1].photo) { %>
+							<img src="./images/<%= titles[titles.length-1].photo %>">
+						<% } %> 
+						<p><%- titles[titles.length-1].newsitem %></p>
+				    <% } %>
 				</div><!-- End Stories -->
-				</div
+
+				</div>
 				<div id = "archives" class = "archives">
-					<h5>Previous Stories</h5>
-						<%= %>
+
 				</div><!-- Archives -->
 
 		</div><!-- end body -->
